@@ -1,0 +1,94 @@
+  .add-profile{
+    background-color: rgb(52, 51, 51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .add-profile h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #333;
+  }
+  
+  .add-profile input[type="text"],
+  .add-profile select {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 420px;
+  }
+
+  .add-profile select[multiple] {
+    height: auto;
+  }
+  
+  .add-profile label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .add-profile button[type="submit"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(221, 23, 89); 
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .add-profile {
+      padding: 10px;
+      height: auto;
+    }
+  
+    .add-profile h1 {
+      font-size: 24px;
+    }
+  
+    .add-profile input[type="text"],
+    .add-profile select {
+      font-size: 14px;
+      width: 100%;
+      max-width: none;
+    }
+  
+    .add-profile label {
+      font-size: 16px;
+    }
+  
+    .add-profile button[type="submit"] {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .add-profile h1 {
+      font-size: 20px;
+    }
+  
+    .add-profile input[type="text"],
+    .add-profile select {
+      font-size: 12px;
+    }
+  
+    .add-profile label {
+      font-size: 14px;
+    }
+  
+    .add-profile button[type="submit"] {
+      font-size: 16px;
+    }
+  }

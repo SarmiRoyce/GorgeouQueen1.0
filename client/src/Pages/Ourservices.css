@@ -1,0 +1,39 @@
+.content {
+    background-color: rgb(52, 51, 51);
+}
+
+.content h1 {
+    color: rgb(255, 98, 165);
+}
+
+.content p {
+    color: white;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content h1 {
+      font-size: 40px; 
+    }
+    
+    .content p {
+      font-size: 24px; 
+    }
+    
+    .content img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .content h1 {
+      font-size: 30px;
+    }
+    
+    .content p {
+      font-size: 18px; 
+    }
+  }
+

@@ -1,0 +1,31 @@
+.card:hover{
+    transform: scale(1.05);
+}
+
+.btn12{
+    background-color: rgb(245, 131, 150); 
+    color: white;
+    padding: 5px 10px; 
+    font-size: 20px;
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    background-color: rgb(221, 23, 89); 
+    transition: background-color 0.2s;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .btn12 {
+      padding: 5px 8px;
+      font-size: 18px; 
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .btn12 {
+      padding: 4px 6px; 
+      font-size: 16px; 
+    }
+  }

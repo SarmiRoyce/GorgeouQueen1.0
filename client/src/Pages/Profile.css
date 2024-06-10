@@ -1,0 +1,167 @@
+   .pro-form5 {
+    background-color: rgb(52, 51, 51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+
+   }
+   
+   .pro-form {
+    width: 60%;
+    /* margin: 0 auto; */
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header {
+    text-align: center;
+  }
+  
+  .profile-header img {
+    width: 200px;
+    height: 180px;
+    border-radius: 50%;
+  }
+  
+  .profile-header input {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .container14 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .btn-primary {
+    background-color: rgb(221, 23, 89);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .container.portfolio,
+  .container.contact {
+    margin-top: 30px;
+  }
+  
+  .container h2,
+  .container h3 {
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .container.portfolio .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .container.portfolio .col-md-4 {
+    flex: 1 1 30%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background: #fff;
+  }
+  
+  .container.portfolio img {
+    width: 300px;
+    height: 180px;
+    margin-bottom: 10px;
+  }
+  
+  .container.portfolio input[type="file"],
+  .container.portfolio input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .container.contact input[type="text"],
+  .container.contact input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .container.contact > div {
+    margin-top: 20px;
+  }
+  
+  .container.contact button[type="button"] {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .container.contact button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: rgb(221, 23, 89);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  button[type="button"] {
+    padding: 5px 10px;
+    background: rgb(221, 23, 89);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+
+  /* Responsive Styles */
+@media (max-width: 768px) {
+  .pro-form {
+      width: 95%;
+  }
+
+  .profile-header img {
+      width: 120px; 
+      height: 120px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .pro-form {
+      width: 100%; 
+  }
+
+  .profile-header img {
+      width: 100px; 
+      height: 100px; 
+  }
+}

@@ -1,0 +1,479 @@
+  /* Navbar */
+  .img3{
+    height: 220px;
+  }
+
+  .navbar{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .img3 {
+      height: 100px;
+  }
+
+  .navbar {
+      padding-left: 30px; 
+      padding-right: 30px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .img3 {
+      height: 80px; 
+  }
+
+  .navbar {
+      padding-left: 15px; 
+      padding-right: 15px;
+  }
+}
+
+
+
+
+  /* Register Page */
+
+.Register {
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    border-radius: 10px;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+}
+.register-full {
+    background-color: rgb(52, 51, 51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+}
+.register-text label {
+    font-size: 20px;
+}
+.register-text input {
+    border-radius: 5px;
+    width: 400px;
+    height: 45px;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.btn15 {
+  background-color: rgb(245, 131, 150); 
+  color: white;
+  padding: 10px 35px; 
+  font-size: 22px;
+  border: none;
+  border-radius: 10px; 
+  cursor: pointer;
+  background-color: rgb(221, 23, 89); 
+  transition: background-color 0.3s;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .Register {
+    padding: 20px;
+  }
+  
+  .register-text label {
+    font-size: 18px;
+  }
+  
+  .register-text input {
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .btn15 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .Register {
+    padding: 10px;
+  }
+  
+  .register-text label {
+    font-size: 16px;
+  }
+  
+  .register-text input {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .btn15 {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+  /* ShowProfile.css */
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-header img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+.container h3 {
+  font-weight: 800;
+}
+
+.portfolio {
+  text-align: center;
+}
+
+.portfolio .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio .col-md-4 {
+  margin-bottom: 20px;
+}
+
+.portfolio img {
+  width: 100%;
+  height: auto;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: 10px;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact ul li {
+  margin-bottom: 5px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .profile-header img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-header img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+
+
+/* Profile.css */
+.beautician-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.beautician-card:hover {
+  transform: scale(1.05);
+}
+
+.beautician-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.beautician-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .beautician-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .beautician-card {
+    width: 90%;
+  }
+}
+
+
+/* Show Profile.css */
+
+.showprofile2 {
+  background-color: rgb(52, 51, 51);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+}
+
+.showprofile {
+  width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+/* Profile Header */
+.profile-header5 {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-header5 img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
+}
+
+.profile-header5 h1 {
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profile-header5 h2 {
+  margin: 5px 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #666;
+}
+
+.profile-header5 p {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #777;
+}
+
+/* Container Services */
+.container20 {
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.container20 h3 {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.container20 ul {
+  padding: 0;
+}
+
+.container20 ul li {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+
+/* Contact Information */
+.container30.contact {
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.btn10 {
+  color: white;
+  padding: 5px 15px; 
+  font-size: 23px;
+  border: none;
+  border-radius: 10px; 
+  cursor: pointer;
+  background-color: rgb(221, 23, 89); 
+  transition: background-color 0.2s;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .showprofile {
+    width: 95%;
+  }
+  
+  .container20,
+  .container30 {
+    padding: 15px;
+    margin: 15px auto;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .showprofile {
+    width: 95%;
+  }
+  
+  .container20,
+  .container30 {
+    padding: 15px;
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-header5 h1 {
+    font-size: 22px;
+  }
+  
+  .profile-header5 h2 {
+    font-size: 18px;
+  }
+  
+  .profile-header5 p {
+    font-size: 16px;
+  }
+  
+  .container20 h3 {
+    font-size: 18px;
+  }
+  
+  .container20 ul li {
+    padding: 8px;
+  }
+}
+@media (max-width: 576px) {
+  .profile-header5 h1 {
+    font-size: 22px;
+  }
+  
+  .profile-header5 h2 {
+    font-size: 18px;
+  }
+  
+  .profile-header5 p {
+    font-size: 16px;
+  }
+  
+  .container20 h3 {
+    font-size: 18px;
+  }
+  
+  .container20 ul li {
+    padding: 8px;
+  }
+}
+
+.filter-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.filter-button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter-button.selected {
+  background-color: rgb(221, 23, 89);
+  color: white;
+}
+
+.services-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  display: none;
+}
+
+.card-body .services-list {
+  display: block;
+}
+
+.services-list .service-item {
+  background: #f9f9f9;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  text-transform: capitalize;
+}
+.filter-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.filter-button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter-button.selected {
+  background-color: rgb(221, 23, 89);
+  color: white;
+}
+
+.services-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  display: none;
+}
+
+.card-body .services-list {
+  display: block;
+}
+
+.services-list .service-item {
+  background: #f9f9f9;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  text-transform: capitalize;
+}

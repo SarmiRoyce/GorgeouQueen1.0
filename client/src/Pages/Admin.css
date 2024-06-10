@@ -1,0 +1,411 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+
+  h2 {
+    color: #333;
+  }
+  
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #444;
+    padding-top: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .sidebar ul li a:hover {
+        color: rgb(255, 98, 165);
+  }
+  
+  .main-content {
+    margin-left: 220px;
+    padding: 20px;
+  }
+  
+  .user-info {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .user-info button {
+    padding: 10px 20px;
+    background-color: rgb(221, 23, 89); 
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .user-info button:hover {
+    background-color: #c0392b;
+  }
+  
+  .foot {
+    text-align: center;
+    padding: 20px;
+    background-color: #444;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-left: -40px;
+  }
+  
+  .data-table {
+    margin-left: 220px;
+    padding: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  button[style*="backgroundColor: green"] {
+    background-color: #2cad09;
+    color: white;
+  }
+  
+  button[style*="backgroundColor: red"] {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .user-form {
+    margin-left: 220px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+  }
+  
+  .user-form input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .user-form button {
+    background-color: rgb(221, 23, 89); 
+    color: white;
+  }
+  
+  .user-form button:hover {
+    background-color: #3498db;
+  }
+  
+
+
+
+/* Admin.css */
+
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding-top: 20px;
+  transition: width 0.3s;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  color: rgb(255, 98, 165);
+  /* background-color: #575757; */
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.user-info {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.user-info button {
+  padding: 10px 20px;
+  /* background-color: #333; */
+  background-color: rgb(221, 23, 89); 
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* .user-info button:hover {
+  background-color: #575757;
+} */
+
+.data-table {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #3c3b3b;
+  color: white;
+}
+
+.data-table td {
+  background-color: #f9f9f9;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.data-table button {
+  padding: 5px 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.user-form {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.user-form h2 {
+  margin-top: 0;
+}
+
+.user-form input {
+  display: block;
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.user-form button {
+  padding: 10px 20px;
+  background-color: rgb(221, 23, 89); 
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .sidebar ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .data-table {
+    margin-left: 0;
+  }
+  
+  .user-form {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar ul li {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .user-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-info button {
+    margin-bottom: 10px;
+  }
+
+  .data-table table, .data-table th, .data-table td {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .user-form input, .user-form button {
+    width: 100%;
+  }
+}
+/* Admin.css */
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #555;
+}
+
+/* Main content styles */
+.main-content {
+  margin-left: 200px; /* Adjust according to sidebar width */
+  padding: 20px;
+}
+
+.admin-board {
+  margin-top: 20px;
+}
+
+.admin-board h2 {
+  margin-bottom: 10px;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Logout button styles */
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
