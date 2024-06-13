@@ -477,3 +477,155 @@
   border-radius: 3px;
   text-transform: capitalize;
 }
+
+
+
+
+
+.book-full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.Book {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.book-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-text h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.book-text label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.book-text input,
+.book-text select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.book-text input[type='text'],
+.book-text input[type='date'],
+.book-text input[type='time'],
+.book-text select {
+  width: calc(100% - 22px); /* Adjust for padding and border */
+}
+
+.stripe {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-large {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.pink {
+  background-color: pink;
+  border-radius: 10px;
+  margin-right: 200px;
+  width: 140px;
+  height: 53px;
+}
+
+/* Styling for react-select components */
+.basic-multi-select {
+  border-radius: 5px;
+}
+
+.select__control {
+  border: 1px solid blue;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.select__control--is-focused {
+  border-color: #007bff;
+  box-shadow: 0 0 0 1px #007bff;
+}
+
+.select__value-container {
+  padding: 2px 8px;
+}
+
+.select__input {
+  color: #333;
+}
+
+.select__menu {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.select__option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.select__option--is-focused {
+  background-color: #007bff;
+  color: white;
+}
+
+.select__option--is-selected {
+  background-color: #0056b3;
+  color: white;
+}
+
+.select__multi-value {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  padding: 2px 6px;
+  margin: 2px;
+}
+
+.select__multi-value__label {
+  color: pink;
+}
+
+.select__multi-value__remove {
+  color: black;
+  cursor: pointer;
+}
+.admin-dashboard {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}

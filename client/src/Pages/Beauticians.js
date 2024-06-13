@@ -88,8 +88,8 @@ function Beautician() {
         if (token) {
             window.location.href = `/showprofile/${beautician}`;
         } else {
-            // If token doesn't exist, navigate to the home page
-            // window.location.href = "login";
+            // If token doesn't exist, navigate to the login page
+            // window.location.href = "/login";
         }
     };
 
@@ -117,13 +117,15 @@ function Beautician() {
     };
 
     const filterBeauticians = () => {
-        if (selectedServices.length === 0) {
-            return beauticians;
-        }
+        // Filter beauticians based on selected services and verification status
+        const filteredByServices = selectedServices.length === 0
+            ? beauticians
+            : beauticians.filter(beautician =>
+                selectedServices.every(service => beautician.services[service])
+            );
 
-        return beauticians.filter(beautician => 
-            selectedServices.every(service => beautician.services[service])
-        );
+        // Filter beauticians to only show verified ones
+        return filteredByServices.filter(beautician => beautician.isVerified);
     };
 
     return (
@@ -149,15 +151,17 @@ function Beautician() {
                         <img src={beautician.imageUrl || "https://d32ijn7u0aqfv4.cloudfront.net/wp/wp-content/uploads/raw/SORL0723007_1560x880_desktop.jpg"} style={{ padding: '10px', width: '285px', height: '220px' }}/>
                         <div className="card-body">
                             <h5 className="card-title">{beautician.name}</h5>
-                            <button onClick={() => toggleServices(index)} className='btn12'>Services</button>
+                            <button onClick={() => toggleServices(index)} className='btn12' 
+                            >Services</button>
                             {visibleServices[index] && (
                                 <ul className="services-list">
                                     {renderServices(beautician.services)}
                                 </ul>
-                            )}<br/><br/>    
+                            )}  
                             <Link
                                 to={`/showprofile/${beautician._id}`}
                                 className='btn12'
+                                style={{marginLeft:"18px"}}
                                 id="buttoncardtractor2"
                                 onClick={() => handleHireClick(beautician._id)}>
                                 View Profile

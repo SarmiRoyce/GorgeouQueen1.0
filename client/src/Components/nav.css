@@ -19,15 +19,19 @@
   
   #loginBtn {
     font-size: 25px;
-    padding: 5px 20px;
-    height: 42px;
+    margin-top: 8px;
+    padding: 1px 20px;
+    height: 40px;
     border: none;
     background-color: rgb(255, 98, 165); 
     color: white;
     border-radius: 12px;
     cursor: pointer;
   }
-
+  /* #loginBtn:hover{
+    background-color: black;
+    color: white;
+  } */
   .nav-item button:hover {
     background-color: rgb(245, 40, 129); 
   }
@@ -64,7 +68,6 @@
     }
     
     .img3 {
-      /* height: 60px; */
       margin-bottom: 10px;
     }
     

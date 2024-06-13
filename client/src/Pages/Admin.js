@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../Pages/Admin.css';function Admin() {
+import '../Pages/Admin.css';
+
+function Admin() {
   const [users, setUsers] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const navigate = useNavigate();  useEffect(() => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
     fetchUsers();
-  }, []);  const fetchUsers = async () => {
+  }, []);
+
+  const fetchUsers = async () => {
     try {
       const response = await fetch('http://localhost:3002/beauticianprofile/view');
       if (!response.ok) {
@@ -17,20 +23,9 @@ import '../Pages/Admin.css';function Admin() {
       console.error('Error fetching users:', error);
       alert(`Failed to fetch users: ${error.message}`);
     }
-  };  const handleDeleteUser = async (id) => {
-    try {
-      const response = await fetch(`http://localhost:3002/beautician/delete/${id}`, {
-        method: 'DELETE'
-      });
-      if (!response.ok) {
-        throw new Error('Failed to delete user');
-      }
-      setUsers(users.filter((user) => user._id !== id));
-    } catch (error) {
-      console.error('Error deleting user:', error);
-      alert(`Failed to delete user: ${error.message}`);
-    }
-  };  const toggleVerifyUser = async (id) => {
+  };
+
+  const toggleVerifyUser = async (id) => {
     try {
       const response = await fetch(`http://localhost:3002/beauticianprofile/verified/${id}`, {
         method: 'PATCH',
@@ -45,23 +40,32 @@ import '../Pages/Admin.css';function Admin() {
       console.error('Error verifying user:', error);
       alert(`Failed to verify the user: ${error.message}`);
     }
-  };  const handleLogout = () => {
+  };
+
+  const handleLogout = () => {
     localStorage.removeItem('auth-token');
     setIsLoggedIn(false);
     navigate('/');
-  };  return (
+  };
+
+  return (
     <div>
       <div className='sidebar'>
-        <ul style={{ marginTop: '100px' }}>
-          <li><a href='/'>Home</a></li>
-          <li><a href='/users'>User</a></li>
-          <li><a href='/Profile'>Beauticians</a></li>
-          <li><a href='/Contact'>Contact Us</a></li>
+        <ul style={{ marginTop: '150px'}}>
+          {/* <li><a href='/'>Home</a></li> */}
+          <li><a href='/Admin'>Beauticians</a></li>
+          <li><a href='/admin/booking'>Bookings</a></li>
+          <li><a href='/Contact'>Payment</a></li>
         </ul>
       </div>
-      <section>
-        <h2 style={{ marginLeft: '300px' }}>Welcome, Sarmina!</h2>
-      </section>
+      <div className='sarmi23'>
+        <h2>Welcome, Sarmina!</h2>
+      </div>
+      <div className='sarmi'>
+        <p>Total Booking</p>
+        <p>Total Beauticians</p>
+        <p>Payment</p>
+      </div>
       {isLoggedIn ? (
         <li className="nav-item">
           <button className="btn" id="loginBtn" onClick={handleLogout}>Logout</button>
@@ -77,7 +81,7 @@ import '../Pages/Admin.css';function Admin() {
         </div>
       </div>
       <div className="admin-board" style={{ marginLeft: '200px' }}>
-        <h2>Beautician Profiles</h2>
+        <h4>Beautician Profiles</h4>
         <table>
           <thead>
             <tr>
@@ -115,10 +119,9 @@ import '../Pages/Admin.css';function Admin() {
                 </td>
                 <td>{profile.isVerified ? 'Yes' : 'No'}</td>
                 <td>
-                  <button onClick={() => toggleVerifyUser(profile._id)}>
+                  <button onClick={() => toggleVerifyUser(profile._id)} >
                     {profile.isVerified ? 'Unverify' : 'Verify'}
                   </button>
-                  {/* <button onClick={() => handleDeleteUser(profile._id)}>Delete</button> */}
                 </td>
               </tr>
             ))}
@@ -127,4 +130,6 @@ import '../Pages/Admin.css';function Admin() {
       </div>
     </div>
   );
-}export default Admin;
+}
+
+export default Admin;

@@ -15,7 +15,7 @@ function Ourservices() {
           advise customers about their skin, hair and body. <br/>
           They also perform facials, waxing and pedicure. </p>
 
-        <a href='/packages'><img src="https://freeonlinedeal.files.wordpress.com/2015/06/parlour-services.jpg" alt="Beauty Parlour and Salon Visits" style={{marginLeft:'700px',marginTop:'20px',borderRadius:'20px'}}/></a><br/>
+        <a href='/Profile'><img src="https://freeonlinedeal.files.wordpress.com/2015/06/parlour-services.jpg" alt="Beauty Parlour and Salon Visits" style={{marginLeft:'700px',marginTop:'20px',borderRadius:'20px'}}/></a><br/>
         <Footer/>
       
     </div>

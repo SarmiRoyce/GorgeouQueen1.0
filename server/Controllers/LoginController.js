@@ -13,7 +13,7 @@ exports.LoginUser = async (req, res) => {
     if (user) {
       const isMatch = await bcrypt.compare(password, user.password);
       if (isMatch) {
-        const token = jwt.sign({ email: user.email }, process.env.JWT, { expiresIn: "1d" });
+        const token = jwt.sign({ email: user.email , fname: user.firstname, lname: user.lastname, id: user._id }, process.env.JWT, { expiresIn: "1d" });
         res.cookie("token", token, { httpOnly: true });
         return res.json("Success");
       } else {
@@ -25,7 +25,7 @@ exports.LoginUser = async (req, res) => {
     if (beautician) {
       const isMatch = await bcrypt.compare(password, beautician.password);
       if (isMatch) {
-        const token = jwt.sign({ email: beautician.email }, process.env.JWT, { expiresIn: "1d" });
+        const token = jwt.sign({ email: beautician.email , name: beautician.name, id: beautician._id}, process.env.JWT, { expiresIn: "1d" });
         res.cookie("token", token, { httpOnly: true });
         return res.json("Success beautician");
       } else {
@@ -37,7 +37,7 @@ exports.LoginUser = async (req, res) => {
     if (admin) {
       const isMatch = (password === admin.password);
       if (isMatch) {
-        const token = jwt.sign({ email: admin.email }, process.env.JWT, { expiresIn: "1d" });
+        const token = jwt.sign({ email: admin.email, name: admin.name, id: admin._id}, process.env.JWT, { expiresIn: "1d" });
         res.cookie("token", token, { httpOnly: true });
         return res.json("Admin_Success");
       } else {

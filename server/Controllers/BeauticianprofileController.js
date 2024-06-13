@@ -1,4 +1,3 @@
-// controllers/profileController.js
 const Profile = require('../Models/Beauticianprofile.model');
 
 exports.createProfile = async (req, res) => {
@@ -47,13 +46,17 @@ exports.showProfile = async (req, res) => {
   }
 };
 
-exports.toggleVerification = async (req, res) => { 
-  const { id } = req.params; 
-  try { const beautician = await Profile.findById(id); 
-    if (!beautician) { return res.status(404).json({ error: 'Beautician not found' }); }
-     beautician.isVerified = !beautician.isVerified; 
-     await beautician.save(); res.status(200).json(beautician);
-     }
-      catch (error) { 
-        res.status(500).json({ error: 'Failed to update verification status' });
-       } };
+exports.toggleVerification = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const beautician = await Profile.findById(id);
+    if (!beautician) {
+      return res.status(404).json({ error: 'Beautician not found' });
+    }
+    beautician.isVerified = !beautician.isVerified;
+    await beautician.save();
+    res.status(200).json(beautician);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to update verification status' });
+  }
+};

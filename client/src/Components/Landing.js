@@ -2,6 +2,7 @@ import React from 'react';
 import "./Landing.css";
 import Navbar from './nav';
 import image from '../Components/Gorgeous_Queen_2_-removebg-preview.png';
+import Contact from '../Pages/Contact Us'
 import Footer from './Footer'
 // import image from '../Assets/'
 
@@ -22,6 +23,10 @@ function Navbar1() {
                     <h1  style={{textAlign:'left',fontSize:'100px',marginLeft:'120px'}} className='text1'>Welcome to the <br/>Beauty World!</h1><br />
                     <h3 style={{textAlign:'left',fontSize:'40px',marginLeft:'120px'}} className='text2'>Join with us to make your special occasions are <br />memorable and beautiful.</h3><br /><br />
                 </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                {/* <package/>
+                
+                <profile/> */}
+                {/* <Contact/> */}
                 <Footer/>
                 
 

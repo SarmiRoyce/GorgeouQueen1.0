@@ -18,7 +18,8 @@ import Admin from './Pages/Admin'
 import Profilebeauty from './Pages/Profile'
 import Adprofile from './Components/addProfile'
 import Showprofile from './Pages/showprofile'
-
+import Bookindetails from './Pages/adminBooking'
+import Beauticianbooking from './Pages/beauticianbookin'
 
 
 
@@ -38,11 +39,15 @@ function App() {
         <Route path='/role' element ={<Who/>}/>
         <Route path='/Beauty' element ={<Pretty/>}/>
         <Route path='/Services' element ={<OS/>}/>
-        <Route path='/Book' element ={<Book/>}/>
+        <Route path='/Book/:id' element ={<Book/>}/>
         <Route path='/Admin' element ={<Admin/>}/>
         <Route path='/Profilebeauty' element ={<Profilebeauty/>}/>
         <Route path='/Addprofile' element ={<Adprofile/>}/>
         <Route path='/showprofile/:id' element ={<Showprofile/>}/>
+        <Route path='/admin/booking' element ={<Bookindetails/>}/>
+        <Route path='/Beauticians/bookings' element ={<Beauticianbooking/>}/>
+
+
       </Routes> 
       
     </div>
