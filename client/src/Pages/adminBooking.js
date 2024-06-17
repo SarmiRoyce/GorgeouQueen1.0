@@ -42,7 +42,7 @@ function AdminDashboard() {
       <div className='sarmi'>
         <p>Total Booking</p>
         <p>Total Beauticians</p>
-        <p>Payment</p>
+        <p>Total Amount</p>
       </div>
       <div className='main-content'>
         <div className='user-info'>

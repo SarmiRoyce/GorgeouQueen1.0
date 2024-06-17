@@ -18,8 +18,8 @@ import Admin from './Pages/Admin'
 import Profilebeauty from './Pages/Profile'
 import Adprofile from './Components/addProfile'
 import Showprofile from './Pages/showprofile'
-import Bookindetails from './Pages/adminBooking'
-import Beauticianbooking from './Pages/beauticianbookin'
+import Bookingdetails from './Pages/adminBooking'
+import Beauticianbooking from './Pages/beauticianbooking'
 
 
 
@@ -31,20 +31,20 @@ function App() {
         <Route path='/' element ={<Landing/>}/>
         <Route path='/login' element ={<Login/>}/>
         {/* <Route path='/Payment' element ={<Payment/>}/> */}
-        <Route path='/packages' element ={<Services/>}/>
+        {/* <Route path='/packages' element ={<Services/>}/> */}
         <Route path='/Contact' element ={<Contact/>}/>
         <Route path='/Register' element ={<BR/>}/>
         <Route path='/URegister' element ={<UR/>}/>
         <Route path='/profile' element ={<Pro/>}/>
         <Route path='/role' element ={<Who/>}/>
-        <Route path='/Beauty' element ={<Pretty/>}/>
+        {/* <Route path='/Beauty' element ={<Pretty/>}/> */}
         <Route path='/Services' element ={<OS/>}/>
         <Route path='/Book/:id' element ={<Book/>}/>
         <Route path='/Admin' element ={<Admin/>}/>
         <Route path='/Profilebeauty' element ={<Profilebeauty/>}/>
         <Route path='/Addprofile' element ={<Adprofile/>}/>
         <Route path='/showprofile/:id' element ={<Showprofile/>}/>
-        <Route path='/admin/booking' element ={<Bookindetails/>}/>
+        <Route path='/admin/booking' element ={<Bookingdetails/>}/>
         <Route path='/Beauticians/bookings' element ={<Beauticianbooking/>}/>
 
 

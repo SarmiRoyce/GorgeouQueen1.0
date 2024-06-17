@@ -493,7 +493,7 @@ function Profile() {
                   <button type="button" onClick={() => removeWork(index)}>Remove</button>
                 </div>
               ))}
-              <button type="button" onClick={addWork}>Add Work</button>
+              <button type="button" onClick={addWork} style={{width:'130px',backgroundColor:'green'}}>Add Work</button>
             </div>
           </div><br />
           <div className="container contact">
@@ -535,9 +535,9 @@ function Profile() {
                   <button type="button" onClick={() => removeBusinessHour(index)}>Remove</button>
                 </div>
               ))}
-              <button type="button" onClick={addBusinessHour}>Add Business Hour</button>
+              <button type="button" onClick={addBusinessHour} style={{backgroundColor:'green'}}>Add Business Hour</button>
             </div>
-            <button type="submit" className="btn btn-primary">Save Profile</button>
+            <button type="submit" className="btn btn-primary" style={{backgroundColor:'#dd1759'}}>Save Profile</button>
           </div>
         </form>
       </div>

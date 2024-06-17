@@ -66,7 +66,7 @@ function SignUpPage() {
   return (
     <div>
       <Navbar />
-      <div className='register-full'>
+      <div className='register-full' style={{height:'100vh'}}>
         <form onSubmit={handleSubmit} className='Register' style={{ display: 'flex', justifyContent: 'space-evenly', width: '950px' }}>
           <div>
             <img src="https://content.jdmagicbox.com/comp/bidar/m2/9999p8482.8482.180626152315.d4m2/catalogue/apsara-beauty-parlour-hallikhed-bidar-bidar-beauty-parlours-y43tudewu1.jpg" alt='bridal' style={{ height: '700px' }} />

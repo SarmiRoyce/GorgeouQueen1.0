@@ -64,7 +64,7 @@ function Admin() {
       <div className='sarmi'>
         <p>Total Booking</p>
         <p>Total Beauticians</p>
-        <p>Payment</p>
+        <p>Total Amount</p>
       </div>
       {isLoggedIn ? (
         <li className="nav-item">
