@@ -29,6 +29,22 @@
 
 // bookingModel.js
 
+// const mongoose = require('mongoose');
+// const Schema = mongoose.Schema;
+
+// const bookingSchema = new Schema({
+//   beauticianName: { type: String, required: true },
+//   customerName: { type: String, required: true },
+//   packages: [{ type: String }], // Assuming packages are stored as an array of strings
+//   date: { type: Date, required: true },
+//   time: { type: String, required: true },
+//   createdAt: { type: Date, default: Date.now }
+// });
+
+// module.exports = mongoose.model('Booking', bookingSchema);
+
+
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -38,6 +54,7 @@ const bookingSchema = new Schema({
   packages: [{ type: String }], // Assuming packages are stored as an array of strings
   date: { type: Date, required: true },
   time: { type: String, required: true },
+  status: { type: String, enum: ['pending', 'done', 'cancelled'], default: 'pending' },
   createdAt: { type: Date, default: Date.now }
 });
 

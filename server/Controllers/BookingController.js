@@ -69,6 +69,37 @@
 
 // bookingController.js
 
+// const Booking = require('../Models/Booking.model');
+
+// exports.createBooking = async (req, res) => {
+//   try {
+//     const { beauticianName, customerName, packages, date, time } = req.body;
+//     const newBooking = new Booking({
+//       beauticianName,
+//       customerName,
+//       packages,
+//       date,
+//       time
+//     });
+//     const savedBooking = await newBooking.save();
+//     res.status(201).json(savedBooking);
+//   } catch (error) {
+//     res.status(500).json({ message: error.message });
+//   }
+// };
+
+
+
+// exports.getBooking = async (req,res)=>{
+//   try {
+//     const bookings = await Booking.find();
+//     res.json(bookings);
+//   } catch (error) {
+//     res.status(500).json({ message: error.message });
+//   }
+// }
+
+
 const Booking = require('../Models/Booking.model');
 
 exports.createBooking = async (req, res) => {
@@ -88,13 +119,32 @@ exports.createBooking = async (req, res) => {
   }
 };
 
-
-
-exports.getBooking = async (req,res)=>{
+exports.getBooking = async (req, res) => {
   try {
     const bookings = await Booking.find();
     res.json(bookings);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
-}
+};
+
+exports.updateBookingStatus = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+
+    const updatedBooking = await Booking.findByIdAndUpdate(
+      id,
+      { status },
+      { new: true }
+    );
+
+    if (!updatedBooking) {
+      return res.status(404).json({ message: 'Booking not found' });
+    }
+
+    res.json(updatedBooking);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};

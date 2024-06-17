@@ -12,7 +12,7 @@ export default function Login() {
     e.preventDefault();
     const userdata = { email, password };
 
-    fetch("http://localhost:3002/user/login", {
+    fetch("http://localhost:3001/user/login", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ export default function Login() {
         navigate("/");
       } else if (data === "Success beautician") {
         localStorage.setItem('auth-token', 'beautician-token');
-        navigate("/Profilebeauty");
+        navigate("/Beauticians/bookings");
       } else if (data === "Admin_Success") {
         localStorage.setItem('auth-token', 'admin-token');
         navigate("/Admin");

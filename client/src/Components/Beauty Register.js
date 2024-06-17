@@ -62,7 +62,7 @@ function SignUpPage() {
     formData.append('shopplace', shopplace);
     formData.append('courseCertificates', courseCertificates);
 
-    fetch('http://localhost:3002/beautician/create', {
+    fetch('http://localhost:3001/beautician/create', {
       method: 'POST',
       body: formData,
     })

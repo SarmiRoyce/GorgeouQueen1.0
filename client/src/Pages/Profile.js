@@ -113,7 +113,7 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const response = await fetch('http://localhost:3002/beauticianprofile/create', {
+//       const response = await fetch('http://localhost:3001/beauticianprofile/create', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -387,7 +387,7 @@ function Profile() {
       alert('Please select at least one service.');
       return;
     }    try {
-      const response = await fetch('http://localhost:3002/beauticianprofile/create', {
+      const response = await fetch('http://localhost:3001/beauticianprofile/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

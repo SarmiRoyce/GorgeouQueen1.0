@@ -8,7 +8,7 @@
 //     const [beauticians, setBeauticians] = useState([]);
 
 //     useEffect(() => {
-//         fetch('http://localhost:3002/beauticianprofile/view')
+//         fetch('http://localhost:3001/beauticianprofile/view')
 //             .then(response => response.json())
 //             .then(data => setBeauticians(data))
 //             .catch(error => console.error('Error fetching data:', error));
@@ -77,7 +77,7 @@ function Beautician() {
     const [selectedServices, setSelectedServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3002/beauticianprofile/view')
+        fetch('http://localhost:3001/beauticianprofile/view')
             .then(response => response.json())
             .then(data => setBeauticians(data))
             .catch(error => console.error('Error fetching data:', error));

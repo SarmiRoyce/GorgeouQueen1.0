@@ -49,7 +49,7 @@ function SignUpPage() {
 
     console.log(userData);
 
-    fetch('http://localhost:3002/users/create', {
+    fetch('http://localhost:3001/users/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -31,7 +31,7 @@ function Book() {
     };
 
     try {
-      const response = await fetch('http://localhost:3002/booking/create', {
+      const response = await fetch('http://localhost:3001/booking/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
-import "./nav.css";
+import "../Components/nav.css";
 import image from '../Components/Gorgeous_Queen_2_-removebg-preview.png';
 import axios from "axios";
 
@@ -37,17 +37,17 @@ function Nav() {
                         </div>
                         <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                             <ul className="navbar-nav" style={{ fontSize: '25px' }}>
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <Link className="nav-link" to="/">Home</Link>
+                                </li>&nbsp;&nbsp;&nbsp; */}
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/Profilebeauty">Add Profile</Link>
                                 </li>&nbsp;&nbsp;&nbsp;
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/Services">Our services</Link>
+                                    <Link className="nav-link" to="/Beauticians/bookings">Orders</Link>
                                 </li>&nbsp;&nbsp;&nbsp;
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/Profile">Beauticians</Link>
-                                </li>&nbsp;&nbsp;&nbsp;
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/Contact">Contact Us</Link>
+                                    <Link className="nav-link" to="/ContactUs">Contact Us</Link>
                                 </li>&nbsp;&nbsp;&nbsp;
 
                                 {isLoggedIn ? (

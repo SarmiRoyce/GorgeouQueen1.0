@@ -18,7 +18,7 @@ function AddProfile() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:3002/api/profile', {
+    const response = await fetch('http://localhost:3001/api/profile', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

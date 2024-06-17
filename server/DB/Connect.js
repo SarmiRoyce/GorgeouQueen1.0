@@ -31,7 +31,7 @@ app.use('/beauticianprofile',beauticianprofileRoutes)
 app.use('/booking',bookingRoutes)
 app.use('/user',LoginRoutes)
 app.use('/Admin',AdminRoutes)
-const PORT = 3002;
+const PORT = 3001;
 
 
 

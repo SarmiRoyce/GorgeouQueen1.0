@@ -10,7 +10,7 @@
 //   useEffect(() => {
 //     const fetchProfileData = async () => {
 //       try {
-//         const response = await fetch(`http://localhost:3002/beauticianprofile/showBeautician/${id}`);
+//         const response = await fetch(`http://localhost:3001/beauticianprofile/showBeautician/${id}`);
 //         if (!response.ok) {
 //           throw new Error(`Failed to fetch profile data: ${response.statusText}`);
 //         }
@@ -107,7 +107,7 @@ function ViewProfile() {
   useEffect(() => {
     const fetchProfileData = async () => {
       try {
-        const response = await fetch(`http://localhost:3002/beauticianprofile/showBeautician/${id}`);
+        const response = await fetch(`http://localhost:3001/beauticianprofile/showBeautician/${id}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch profile data: ${response.statusText}`);
         }

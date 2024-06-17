@@ -10,7 +10,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await fetch('http://localhost:3002/booking/view');
+        const response = await fetch('http://localhost:3001/booking/view');
         const data = await response.json();
         setBookings(data);
       } catch (error) {

@@ -13,7 +13,7 @@
 
 //   const fetchUsers = async () => {
 //     try {
-//       const response = await fetch('http://localhost:3002/beauticianprofile/view');
+//       const response = await fetch('http://localhost:3001/beauticianprofile/view');
 //       if (!response.ok) {
 //         throw new Error('Failed to fetch users');
 //       }
@@ -27,7 +27,7 @@
 
 //   const toggleVerifyUser = async (id) => {
 //     try {
-//       const response = await fetch(`http://localhost:3002/beauticianprofile/verified/${id}`, {
+//       const response = await fetch(`http://localhost:3001/beauticianprofile/verified/${id}`, {
 //         method: 'PATCH',
 //         headers: { 'Content-Type': 'application/json' }
 //       });
