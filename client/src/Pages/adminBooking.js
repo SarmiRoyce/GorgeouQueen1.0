@@ -31,9 +31,25 @@ function AdminDashboard() {
       {/* <Navbar /> */}
       <div className='sidebar'>
         <ul style={{ marginTop: '150px' }}>
-          <li><a href='/Admin'>Beauticians</a></li>
+          <li><a href='/profile'>Beauticians</a></li>
           <li><a href='/admin/booking'>Bookings</a></li>
           <li><a href='/Contact'>Payment</a></li>
+          {/* <div className='user-info' style={{ marginLeft: '20px' }}>
+            <button onClick={handleLogout}>Logout</button>
+          </div> */}
+
+          <div className='main-content'style={{ marginLeft: '-5px' }}>
+        <div className='user-info'>
+          {isLoggedIn ? (
+            <button className="btn" id="loginBtn" onClick={handleLogout} >Logout</button>
+          ) : (
+            <Link to="/login">
+              <button className="btn" id="loginBtn">Login</button>
+            </Link>
+          )}
+        </div>
+      </div>
+          
         </ul>
       </div>
       <div className='sarmi23'>
@@ -44,17 +60,17 @@ function AdminDashboard() {
         <p>Total Beauticians <br></br><br></br>6</p>
         {/* <p>Total Amount</p> */}
       </div>
-      {/* <div className='main-content'>
-        <div className='user-info'>
-          {isLoggedIn ? (
-            <button className="btn" id="loginBtn" onClick={handleLogout}>Logout</button>
-          ) : (
-            <Link to="/login">
-              <button className="btn" id="loginBtn">Login</button>
-            </Link>
-          )}
-        </div>
-      </div> */}
+
+    {/* {isLoggedIn ? (
+        <li className="nav-item">
+          <button className="btn" id="loginBtn" onClick={handleLogout}>Logout</button>
+        </li>
+      ) : (
+        <li className="nav-item">
+          <Link to="/login"><button className="btn" id="loginBtn">Login</button></Link>
+        </li>
+      )} */}
+
       <div className='admin-dashboard'>
         <h1>Admin Dashboard</h1>
         <table>

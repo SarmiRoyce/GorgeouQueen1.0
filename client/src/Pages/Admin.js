@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../Pages/Admin.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Admin() {
   const [users, setUsers] = useState([]);
@@ -19,9 +21,10 @@ function Admin() {
       }
       const data = await response.json();
       setUsers(data);
+      toast.success('Users fetched successfully');
     } catch (error) {
       console.error('Error fetching users:', error);
-      alert(`Failed to fetch users: ${error.message}`);
+      toast.error(`Failed to fetch users: ${error.message}`);
     }
   };
 
@@ -36,9 +39,10 @@ function Admin() {
       }
       const updatedUser = await response.json();
       setUsers(users.map((user) => (user._id === id ? updatedUser : user)));
+      toast.success(`User ${updatedUser.isVerified ? 'verified' : 'unverified'} successfully`);
     } catch (error) {
       console.error('Error verifying user:', error);
-      alert(`Failed to verify the user: ${error.message}`);
+      toast.error(`Failed to verify the user: ${error.message}`);
     }
   };
 
@@ -46,30 +50,28 @@ function Admin() {
     localStorage.removeItem('auth-token');
     setIsLoggedIn(false);
     navigate('/');
+    toast.info('Logged out successfully');
   };
 
   return (
     <div>
+      <ToastContainer />
       <div className='sidebar'>
-        <ul style={{ marginTop: '150px'}}>
-          {/* <li><a href='/'>Home</a></li> */}
-          <li><a href='/Admin'>Beauticians</a></li>
+        <ul style={{ marginTop: '150px' }}>
+          <li><a href='/profile'>Beauticians</a></li>
           <li><a href='/admin/booking'>Bookings</a></li>
           <li><a href='/Contact'>Payment</a></li>
-          {/* <div className='main-content'> */}
-        <div className='user-info' style={{marginLeft:'20px'}}>
-          <button onClick={handleLogout}>Logout</button>
-        </div>
-      {/* </div> */}
+          <div className='user-info' style={{ marginLeft: '20px' }}>
+            <button onClick={handleLogout}>Logout</button>
+          </div>
         </ul>
       </div>
       <div className='sarmi23'>
         <h2>Welcome, Sarmina!</h2>
       </div>
       <div className='sarmi'>
-        <p>Total Booking <br></br><br></br>12</p>
-        <p>Total Beauticians <br></br><br></br>6</p>
-        {/* <p>Total Amount</p> */}
+        <p>Total Booking <br /><br />12</p>
+        <p>Total Beauticians <br /><br />6</p>
       </div>
       {isLoggedIn ? (
         <li className="nav-item">
@@ -80,7 +82,6 @@ function Admin() {
           <Link to="/login"><button className="btn" id="loginBtn">Login</button></Link>
         </li>
       )}
-      
       <div className="admin-board" style={{ marginLeft: '200px' }}>
         <h4>Beautician Profiles</h4>
         <table>
