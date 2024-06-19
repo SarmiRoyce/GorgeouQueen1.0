@@ -40,11 +40,11 @@ function AdminDashboard() {
         <h2>Welcome, Sarmina!</h2>
       </div>
       <div className='sarmi'>
-        <p>Total Booking</p>
-        <p>Total Beauticians</p>
-        <p>Total Amount</p>
+        <p>Total Booking <br></br><br></br>12</p>
+        <p>Total Beauticians <br></br><br></br>6</p>
+        {/* <p>Total Amount</p> */}
       </div>
-      <div className='main-content'>
+      {/* <div className='main-content'>
         <div className='user-info'>
           {isLoggedIn ? (
             <button className="btn" id="loginBtn" onClick={handleLogout}>Logout</button>
@@ -54,7 +54,7 @@ function AdminDashboard() {
             </Link>
           )}
         </div>
-      </div>
+      </div> */}
       <div className='admin-dashboard'>
         <h1>Admin Dashboard</h1>
         <table>

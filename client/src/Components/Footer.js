@@ -6,7 +6,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <div>
-        <footer class="bg-body-tertiary text-center text-lg-start" style={{marginTop:'60px'}}>
+        <footer class="bg-body-tertiary text-center text-lg-start">
   <div class="container p-4">
     <div class="row" style={{display:'flex',justifyContent:'space-between'}}>
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">

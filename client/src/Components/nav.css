@@ -23,15 +23,12 @@
     padding: 1px 20px;
     height: 40px;
     border: none;
-    background-color: rgb(255, 98, 165); 
+    background-color: #dd1759;
     color: white;
     border-radius: 12px;
     cursor: pointer;
   }
-  /* #loginBtn:hover{
-    background-color: black;
-    color: white;
-  } */
+
   .nav-item button:hover {
     background-color: rgb(245, 40, 129); 
   }

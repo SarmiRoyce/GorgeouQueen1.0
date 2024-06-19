@@ -1,125 +1,13 @@
-   /*
-
-  
-
- 
-
-  
-  .btn-primary {
-    background-color: rgb(221, 23, 89);
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 10px;
-  }
-  
-  .container.portfolio,
-  .container.contact {
-    margin-top: 30px;
-  }
-  
-  .container h2,
-  .container h3 {
-    font-weight: 600;
-    text-align: center;
-  }
-  
-  .container.portfolio .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .container.portfolio .col-md-4 {
-    flex: 1 1 30%;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
-    background: #fff;
-  }
-  
-  .container.portfolio img {
-    width: 300px;
-    height: 180px;
-    margin-bottom: 10px;
-  }
-  
-  .container.portfolio input[type="file"],
-  .container.portfolio input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .container.contact input[type="text"],
-  .container.contact input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .container.contact > div {
-    margin-top: 20px;
-  }
-  
-  .container.contact button[type="button"] {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .container.contact button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background: rgb(221, 23, 89);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    cursor: pointer;
-  }
-  
-
-  
-
- */
-
-
-
-
-
-
-
-
-
 .pro-form5 {
   background-color: rgb(52, 51, 51);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150vh;
+  height: 160vh;
   padding: 20px;
 }
 
 .pro-form {
-  /* background: #f9f9f9; */
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -205,7 +93,6 @@
 }
 
 .container.portfolio button {
-  /* background-color: #dc3545; */
   color: #fff;
   padding: 5px 10px;
   border: none;
@@ -248,16 +135,16 @@
 
 button[type="button"] {
   padding: 5px 10px;
-  background: rgb(221, 23, 89);
+  background: #dd1759;
   border: none;
   border-radius: 5px;
-  /* width: 150px; */
 }
 
 .container.contact button {
-  background:  rgb(195, 7, 7);
+  background:  rgb(249, 24, 24);
   color: white;
-  padding: 10px 20px;
+  font-weight: bolder;
+  padding: 6px 20px;
   border: none;
   border-radius: 5px;
   margin-top: 10px;

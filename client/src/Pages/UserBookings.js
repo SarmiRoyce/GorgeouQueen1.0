@@ -55,8 +55,8 @@ function AdminDashboard() {
               <th>Packages</th>
               <th>Date</th>
               <th>Time</th>
-              {/* <th>Status</th> */}
-              <th>Response</th>
+              <th>Status</th>
+              {/* <th>Response</th> */}
             </tr>
           </thead>
           <tbody>
@@ -67,8 +67,8 @@ function AdminDashboard() {
                 <td>{booking.packages.join(', ')}</td>
                 <td>{new Date(booking.date).toLocaleDateString()}</td>
                 <td>{booking.time}</td>
-                {/* <td>{booking.status}</td> */}
-                <td>
+                <td>{booking.status}</td>
+                {/* <td>
                   <button
                     className={`status-button ${booking.status === 'done' ? 'green-tick' : ''}`}
                     onClick={() => updateBookingStatus(booking._id, 'done')}
@@ -91,7 +91,7 @@ function AdminDashboard() {
                       <i className="fa-solid fa-thumbs-down"></i>
                     )}
                   </button>
-                </td>
+                </td> */}
               </tr>
             ))}
           </tbody>

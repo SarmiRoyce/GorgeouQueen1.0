@@ -56,15 +56,20 @@ function Admin() {
           <li><a href='/Admin'>Beauticians</a></li>
           <li><a href='/admin/booking'>Bookings</a></li>
           <li><a href='/Contact'>Payment</a></li>
+          {/* <div className='main-content'> */}
+        <div className='user-info' style={{marginLeft:'20px'}}>
+          <button onClick={handleLogout}>Logout</button>
+        </div>
+      {/* </div> */}
         </ul>
       </div>
       <div className='sarmi23'>
         <h2>Welcome, Sarmina!</h2>
       </div>
       <div className='sarmi'>
-        <p>Total Booking</p>
-        <p>Total Beauticians</p>
-        <p>Total Amount</p>
+        <p>Total Booking <br></br><br></br>12</p>
+        <p>Total Beauticians <br></br><br></br>6</p>
+        {/* <p>Total Amount</p> */}
       </div>
       {isLoggedIn ? (
         <li className="nav-item">
@@ -75,11 +80,7 @@ function Admin() {
           <Link to="/login"><button className="btn" id="loginBtn">Login</button></Link>
         </li>
       )}
-      <div className='main-content'>
-        <div className='user-info'>
-          <button onClick={handleLogout}>Logout</button>
-        </div>
-      </div>
+      
       <div className="admin-board" style={{ marginLeft: '200px' }}>
         <h4>Beautician Profiles</h4>
         <table>

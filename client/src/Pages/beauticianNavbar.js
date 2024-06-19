@@ -47,7 +47,7 @@ function Nav() {
                                     <Link className="nav-link" to="/Beauticians/bookings">Orders</Link>
                                 </li>&nbsp;&nbsp;&nbsp;
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/ContactUs">Contact Us</Link>
+                                    <Link className="nav-link" to="/Contact">Contact Us</Link>
                                 </li>&nbsp;&nbsp;&nbsp;
 
                                 {isLoggedIn ? (

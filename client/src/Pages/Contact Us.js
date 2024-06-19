@@ -38,7 +38,7 @@ function ContactForm() {
     };    
     return (
       <div>
-        <Navbar/>
+        {/* <Navbar/> */}
 
       <div className='form-full'>
         
@@ -86,7 +86,7 @@ function ContactForm() {
             <span>{result}</span>
         </form>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
         </div>
     );
 }

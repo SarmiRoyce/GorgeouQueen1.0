@@ -1,7 +1,9 @@
 .card:hover{
     transform: scale(1.05);
 }
-
+.beauty h1{
+  padding-top: 20px;
+}
 .btn12{
     background-color: rgb(245, 131, 150); 
     color: white;

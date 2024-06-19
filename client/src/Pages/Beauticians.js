@@ -1,65 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-// import Navbar from '../Components/nav';
-// import Footer from '../Components/Footer';
-// import './Beauticians.css';
-// import { Link } from "react-router-dom";
-
-// function Beautician() {
-//     const [beauticians, setBeauticians] = useState([]);
-
-//     useEffect(() => {
-//         fetch('http://localhost:3001/beauticianprofile/view')
-//             .then(response => response.json())
-//             .then(data => setBeauticians(data))
-//             .catch(error => console.error('Error fetching data:', error));
-//     }, []);
-//     const handleHireClick = (beautician) => {
-//         const token = localStorage.getItem("token");
-//         if (token) {
-//             window.location.href = `/showprofile/${beautician}`;
-//         } else {
-//             // If token doesn't exist, navigate to the home page
-//             // window.location.href = "login";
-//         }
-//     };
-
-//     return (
-//         <div className='beauty'>
-//             <Navbar />
-//             <h1 style={{ marginTop: '30px', textAlign: 'center' }}>Beauticians Team</h1>
-//             <div className="card-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', marginTop: '50px' }}>
-//                 {beauticians.map((beautician, index) => (
-//                     <div key={index} className="card" style={{ width: '18rem', margin: '10px' }}>
-//                         <img src="https://d32ijn7u0aqfv4.cloudfront.net/wp/wp-content/uploads/raw/SORL0723007_1560x880_desktop.jpg" style={{ padding: '10px', width: '285px', height: '220px' }}/>
-//                         {/* <img src={beautician.imgSrc} className="card-img-top" alt={`${beautician.name}`} style={{ padding: '10px', width: '285px', height: '220px' }} /> */}
-//                         <div className="card-body">
-//                             <h5 className="card-title">{beautician.name}</h5><br></br>
-//                             {/* <div className="stars">
-//                                 {[...Array(5)].map((star, i) => (
-//                                     <span key={i} className={`fa fa-star ${i < beautician.rating ? 'checked' : ''}`} style={{ color: 'yellow' }}></span>
-//                                 ))}
-//                             </div> */}
-//                             {/* <p className="card-title">[{beautician.services}]</p><br></br> */}
-
-//                             <Link
-//                                 to={`/showprofile/${beautician._id}`}
-//                                 className='btn12'
-//                                 id="buttoncardtractor2"
-//                                 onClick={() => handleHireClick(beautician._id)}>
-//                                 View Profile
-//                             </Link>
-//                         </div>
-//                     </div>
-//                 ))}
-//             </div>
-//             <Footer />
-//         </div>
-//     );
-// }
-
-// export default Beautician;
-
-
 import React, { useState, useEffect } from 'react';
 import Navbar from '../Components/nav';
 import Footer from '../Components/Footer';
@@ -131,7 +69,7 @@ function Beautician() {
     return (
         <div className='beauty'>
             <Navbar />
-            <h1 style={{ marginTop: '30px', textAlign: 'center' }}>Beauticians Team</h1>
+            <h1 style={{ textAlign: 'center' }}>Beauticians Team</h1>
 
             <div className="filter-container" style={{ textAlign: 'center', margin: '20px 0' }}>
                 {availableServices.map(service => (

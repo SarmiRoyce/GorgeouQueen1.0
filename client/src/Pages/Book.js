@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { useLocation,useNavigate} from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../Components/nav';
 import Select from 'react-select';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import '../Pages/Book.css';
 
 function Book() {
@@ -40,14 +42,41 @@ function Book() {
       });
 
       if (response.ok) {
-          alert("booking successsfully");
-          navigate('/profile')
+        const savedBooking = await response.json();
+        toast.success('Booking created successfully!', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setTimeout(() => {
+          navigate('/profile');
+        }, 3000); // Redirect after 3 seconds
+      } else {
+        toast.error('Failed to create booking. Please try again.', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       }
-
-      const savedBooking = await response.json();
-      console.log('Booking created successfully:', savedBooking);
     } catch (error) {
       console.error('Error creating booking:', error);
+      toast.error('Error creating booking. Please try again.', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
 
@@ -104,6 +133,7 @@ function Book() {
           <button type='submit' className='btn-large'>Confirm</button>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 }

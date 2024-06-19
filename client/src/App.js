@@ -20,6 +20,7 @@ import Adprofile from './Components/addProfile'
 import Showprofile from './Pages/showprofile'
 import Bookingdetails from './Pages/adminBooking'
 import Beauticianbooking from './Pages/beauticianbooking'
+import Bookings from './Pages/UserBookings'
 
 
 
@@ -46,6 +47,9 @@ function App() {
         <Route path='/showprofile/:id' element ={<Showprofile/>}/>
         <Route path='/admin/booking' element ={<Bookingdetails/>}/>
         <Route path='/Beauticians/bookings' element ={<Beauticianbooking/>}/>
+        <Route path='/bookings' element ={<Bookings/>}/>
+
+
 
 
       </Routes> 
