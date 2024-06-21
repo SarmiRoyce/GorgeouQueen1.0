@@ -53,6 +53,8 @@ function Admin() {
     toast.info('Logged out successfully');
   };
 
+  const verifiedUsersCount = users.filter(user => user.isVerified).length;
+
   return (
     <div>
       <ToastContainer />
@@ -71,7 +73,8 @@ function Admin() {
       </div>
       <div className='sarmi'>
         <p>Total Booking <br /><br />12</p>
-        <p>Total Beauticians <br /><br />6</p>
+        <p>Total Beauticians <br /><br />{users.length}</p>
+        <p>Verified Beauticians <br /><br />{verifiedUsersCount}</p>
       </div>
       {isLoggedIn ? (
         <li className="nav-item">
@@ -88,6 +91,8 @@ function Admin() {
           <thead>
             <tr>
               <th>Name</th>
+              {/* <th>Image</th> */}
+
               <th>Title</th>
               <th>Experience</th>
               <th>Location</th>
@@ -102,6 +107,8 @@ function Admin() {
             {users.map((profile, index) => (
               <tr key={index}>
                 <td>{profile.name}</td>
+                {/* <td>{profile.imageUrl}</td> */}
+
                 <td>{profile.title}</td>
                 <td>{profile.experience}</td>
                 <td>{profile.location}</td>

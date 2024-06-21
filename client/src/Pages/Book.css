@@ -80,14 +80,7 @@
   font-size: 1.2em;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  /* margin-left: 200px; */
 }
-
-.btn-large:hover {
-  background-color: #ffc0cb;
-}
-
-
 
 /* Responsive Styles */
 @media (max-width: 768px) {

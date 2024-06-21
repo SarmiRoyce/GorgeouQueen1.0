@@ -5,7 +5,9 @@ const profileSchema = new mongoose.Schema({
   title: { type: String, required: true },
   experience: { type: String, required: true },
   location: { type: String, required: true },
-  imageUrl: { type: String, required: true },
+  // imageUrl: { type: String,
+  //    required: true 
+  //   },
   services: {
     HairCutting: { type: Boolean, default: false },
     NailArt: { type: Boolean, default: false },
@@ -30,7 +32,7 @@ const profileSchema = new mongoose.Schema({
   ],
   works: [
     {
-      imageUrl: { type: String, required: true },
+      imageUrl: { type: String },
       description: { type: String, required: true },
     }
   ],

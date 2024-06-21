@@ -1,13 +1,59 @@
+const multer = require('multer');
 const Profile = require('../Models/Beauticianprofile.model');
-
+const { uploaded } = require('../middleware/multer'); 
 exports.createProfile = async (req, res) => {
-  try {
-    const profile = new Profile(req.body);
-    await profile.save();
-    res.status(201).json(profile);
-  } catch (error) {
-    res.status(400).json({ message: error.message });
-  }
+  uploaded(req, res, async (err) => {
+    if (err) {
+        console.error(err);
+        return res.status(500).send('An error occurred while uploading the image.');
+    }
+    
+    const {
+        name,
+        title,
+        experience,
+        location,
+        services,
+        email,
+        instagram,
+        businessHours,
+        works,
+        isVerified
+    } = req.body;
+
+    try {
+        let imageUrl = null;
+        if (req.file) {
+            // Assuming CloudinaryStorage returns the path of the uploaded image
+            imageUrl = req.file.path;
+        }
+
+        // Parse JSON strings if they are strings
+        const parsedServices = typeof services === 'string' ? JSON.parse(services) : services;
+        const parsedBusinessHours = typeof businessHours === 'string' ? JSON.parse(businessHours) : businessHours;
+        const parsedWorks = typeof works === 'string' ? JSON.parse(works) : works;
+
+        const profile = new Profile({
+            name,
+            title,
+            experience,
+            location,
+            imageUrl,
+            services: parsedServices,
+            email,
+            instagram,
+            businessHours: parsedBusinessHours,
+            works: parsedWorks,
+            isVerified
+        });
+
+        await profile.save();
+        res.json({ profile });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('An error occurred while saving the profile.');
+    }
+});
 };
 
 exports.getProfiles = async (req, res) => {
